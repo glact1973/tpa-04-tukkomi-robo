@@ -14,12 +14,12 @@ tukkomiRoboRouter.get('/', (req, res) => {
 
   // 追加ここから
   // ランダムメッセージを取得する
-  const inputPhrase = { phrase }.phrase;
   const tukkomiMessage = getTukkomi();
-  if (inputPhrase === '')  res.send('入力してな'); 
+  if (phrase === '')  {
+    res.send('入力してな'); 
   // else phrase にツッコミを追加して送ろう。 (HINT: get-random-tukkomi.js が役に立つかも）
-  else { 
-    res.send(inputPhrase + '...って、' + tukkomiMessage);
+  } else { 
+    res.send(phrase + '...って、' + tukkomiMessage);
   }
   // /追加ここまで
 });
